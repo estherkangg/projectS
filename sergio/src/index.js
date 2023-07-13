@@ -21,30 +21,31 @@ const createChatLi = (message, className) => {
 }
 
 const generateResponse = (chatElement) => {
-    const API_URL = "https://api.openai.com/v1/chat/completions";
     const messageElement = chatElement.querySelector("p");
 
-    // message for the API request
-    const requestOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
-        },
-        body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: userMessage}],
-        })
-    }
+    // send POST request to server, get response then set as paragraph text
+    fetch("http://localhost:3000/runPython", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        message: userMessage,
+    })
+})
+.then(res => res.text())  // Use res.text() to read the response body as text
+.then(data => {
+    console.log(data);  // Log the actual data received
+    messageElement.textContent = data.trim();
+})
+.catch(() => {
+    messageElement.classList.add("error");
+    messageElement.textContent = "Oops! Something went wrong. Please try again.";
+})
+.finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 
-    // send POST request to API, get response then set as paragraph text
-    fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
-        messageElement.textContent = data.choices[0].message.content.trim();
-    }).catch(() => {
-        messageElement.classList.add("error");
-        messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
+
 
 const handleChat = () => {
     userMessage = chatInput.value.trim(); // get message from user

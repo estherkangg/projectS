@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Frutiger;
 }
 body {
   background: #E3F2FD;
@@ -30,7 +31,7 @@ body {
   color: #fff;
   background: #E60000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  font-family: Frutiger;
+  font-family: "Poppins";
 }
 .chatbot header span {
   position: absolute;
@@ -122,13 +123,25 @@ header h2 {
   visibility: visible;
 }
 
-img{
+
+
+img[src*="jpeg"]{
   border-radius: 6px;
   max-width: 10%;
-  position:relative;
-  top: 20px;
+  position:absolute;
+  top: 4%;
 }
 
+img[src*=".png"] {
+  background-image: url("../public/images/ubs-keys-1.png");
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 17%;
+  margin-bottom: auto;
+  width:fit-content;
+  opacity: 22%;
+}
 
 @media (max-width: 490px) {
   .chatbot-toggler {

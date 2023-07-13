@@ -31,7 +31,7 @@ body {
   color: #fff;
   background: #E60000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  font-family: "Poppins";
+  font-family: Frutiger;
 }
 .chatbot header span {
   position: absolute;

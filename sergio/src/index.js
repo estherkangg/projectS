@@ -9,7 +9,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // variable
-const API_KEY = "PASTE-YOUR-API-KEY"; // api key
+const API_KEY = "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"; // api key
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -39,12 +39,14 @@ const generateResponse = (chatElement) => {
     }
 
     // send POST request to API, get response then set as paragraph text
-    fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
+    fetch('http://localhost:5000/api/generateResponse', requestOptions).then(res => res.json()).then(data => {
         messageElement.textContent = data.choices[0].message.content.trim();
-    }).catch(() => {
+    }).catch((error) => {
+        console.error(error);
+        console.log("error")
         messageElement.classList.add("error");
         messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));    
 }
 
 const handleChat = () => {

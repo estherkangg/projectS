@@ -4,40 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Frutiger;
 }
 body {
   background: #E3F2FD;
-}
-.chatbot-toggler {
-  position: fixed;
-  bottom: 30px;
-  right: 35px;
-  outline: none;
-  border: none;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #724ae8;
-  transition: all 0.2s ease;
-}
-body.show-chatbot .chatbot-toggler {
-  transform: rotate(90deg);
-}
-.chatbot-toggler span {
-  color: #fff;
-  position: absolute;
-}
-.chatbot-toggler span:last-child,
-body.show-chatbot .chatbot-toggler span:first-child  {
-  opacity: 0;
-}
-body.show-chatbot .chatbot-toggler span:last-child {
-  opacity: 1;
 }
 .chatbot {
   position: absolute;
@@ -55,12 +25,13 @@ body.show-chatbot .chatbot-toggler span:last-child {
   transition: all 0.1s ease;
 }
 .chatbot header {
-  padding: 16px 0;
+  padding: 14px 0;
   position: relative;
   text-align: center;
   color: #fff;
-  background: #E60100;
+  background: #E60000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: Frutiger;
 }
 .chatbot header span {
   position: absolute;
@@ -71,7 +42,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
   transform: translateY(-50%);
 }
 header h2 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 .chatbot .chatbox {
   overflow-y: auto;
@@ -94,7 +65,7 @@ header h2 {
   text-align: center;
   line-height: 32px;
   align-self: flex-end;
-  background: #E60100;
+  background: #E60000;
   border-radius: 4px;
   margin: 0 10px 7px 0;
 }
@@ -105,7 +76,7 @@ header h2 {
   max-width: 75%;
   color: #fff;
   font-size: 0.95rem;
-  background: #E60100;
+  background: #E60000;
 }
 .chatbox .chat img{
   border-radius: 50%;
@@ -144,7 +115,7 @@ header h2 {
 }
 .chat-input span {
   align-self: flex-end;
-  color: #E60100;
+  color: #E60000;
   cursor: pointer;
   height: 55px;
   display: flex;
@@ -154,6 +125,26 @@ header h2 {
 }
 .chat-input textarea:valid ~ span {
   visibility: visible;
+}
+
+
+
+img[src*="jpeg"]{
+  border-radius: 6px;
+  max-width: 10%;
+  position:absolute;
+  top: 4%;
+}
+
+img[src*=".png"] {
+  background-image: url("../public/images/ubs-keys-1.png");
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 17%;
+  margin-bottom: auto;
+  width:fit-content;
+  opacity: 22%;
 }
 
 @media (max-width: 490px) {
@@ -178,4 +169,5 @@ header h2 {
   .chatbot header span {
     display: block;
   }
+
 }

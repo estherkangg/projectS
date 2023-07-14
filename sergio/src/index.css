@@ -7,7 +7,7 @@
   font-family: Frutiger;
 }
 body {
-  background: #E3F2FD;
+  background: #ffffff;
 }
 .chatbot {
   position: absolute;
@@ -92,6 +92,7 @@ header h2 {
 .chatbox .incoming p {
   color: #000;
   background: #f2f2f2;
+  opacity: 1;
 }
 .chatbot .chat-input {
   display: flex;
@@ -127,22 +128,21 @@ header h2 {
   visibility: visible;
 }
 
-
-
 img[src*="jpeg"]{
   border-radius: 6px;
   max-width: 10%;
   position:absolute;
-  top: 4%;
+  top: 2%;
+  left: 3%;
 }
 
 img[src*=".png"] {
   background-image: url("../public/images/ubs-keys-1.png");
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 17%;
-  margin-bottom: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+  position: absolute;
+  left: 36.8%;
+  bottom: 22%;
   width:fit-content;
   opacity: 22%;
 }

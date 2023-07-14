@@ -65,7 +65,7 @@ Despite these challenges, we are proud of what our team has accomplished within 
 Continuously refine the user interface of SERGIO to enhance the user experience. Consider integrating features such as pop-up windows and support for multiple languages to cater to diverse user requirements. 
 
 ### Data Collection and Analysis: 
-: Further enhance SERGIO’s capability for data collection and analysis. With extensive testing and prolonged usage, SERGIO can collect and analyze user interaction data, providing valuable insights into user preferences, needs, and trends. This data can be utilized to improve products, services, and processes, leading to informed decision-making and increased productivity. 
+Further enhance SERGIO’s capability for data collection and analysis. With extensive testing and prolonged usage, SERGIO can collect and analyze user interaction data, providing valuable insights into user preferences, needs, and trends. This data can be utilized to improve products, services, and processes, leading to informed decision-making and increased productivity. 
 
 # License
 

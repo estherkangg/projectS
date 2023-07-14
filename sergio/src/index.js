@@ -23,7 +23,7 @@ const generateResponse = (chatElement) => {
     const messageElement = chatElement.querySelector("p");
 
     // send POST request to server, get response then set as paragraph text
-    fetch("http://localhost:3000/runPython", {
+    fetch("http://localhost:3001/runPython", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
@@ -45,7 +45,6 @@ const generateResponse = (chatElement) => {
 
 }
 
-
 const handleChat = () => {
     userMessage = chatInput.value.trim(); // get message from user
     if(!userMessage) return;
@@ -60,7 +59,7 @@ const handleChat = () => {
     
     setTimeout(() => {
         // chatbot buffer -> thinking...
-        const incomingChatLi = createChatLi("sergio's cooking...", "incoming");
+        const incomingChatLi = createChatLi("SERGIO is thinking...", "incoming");
         chatbox.appendChild(incomingChatLi);
         chatbox.scrollTo(0, chatbox.scrollHeight);
         generateResponse(incomingChatLi);

@@ -8,13 +8,12 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // variable
-const API_KEY = "PASTE-YOUR-API-KEY"; // api key
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", `${className}`);
-    let chatContent = className === "outgoing" ? `<p></p>` : `<img src = "https://media.licdn.com/dms/image/C4D03AQFo-Pf-rsj55Q/profile-displayphoto-shrink_400_400/0/1604215537103?e=1694649600&v=beta&t=c57tsQcsIrsv53UClllwlQoVlSpXMhklHLf_i40GcQo" width = 60 height = 60><p></p>`;
+    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
     chatLi.innerHTML = chatContent;
     chatLi.querySelector("p").textContent = message;
     return chatLi; // return chat <li> element

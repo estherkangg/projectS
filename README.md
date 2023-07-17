@@ -19,8 +19,7 @@ SERGIO is a chatbot that is fine tuned for UBS AG internal usage.
 
 3. Start the Node.js server:
     ```
-    cd sergio
-    cd src
+    cd sergio/src
     node server.js
     ```
 

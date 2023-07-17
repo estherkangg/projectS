@@ -47,7 +47,7 @@ The SERGIO Chatbot was developed within an ambitious time frame of just 3 days. 
 
 - Day 1; Planning and Conceptualization
 - Day 2: Implementation and Integration
-- Day 3: Testing, Refinement, and Deployment
+- Day 3: Testing and Refinement
 
 
 ## Challenges
